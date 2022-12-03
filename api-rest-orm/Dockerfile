@@ -13,7 +13,7 @@ RUN go mod download
 COPY . ./
 
 # Build the binary.
-RUN go build -o ./build ./cmd
+RUN go build -o ./build ./cmd:q
 expose 3000
 
 CMD ["/app/build"]
